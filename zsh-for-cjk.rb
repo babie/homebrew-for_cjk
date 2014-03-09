@@ -8,6 +8,7 @@ class ZshForCjk < Formula
 
   depends_on 'gdbm'
   depends_on 'pcre'
+  depends_on 'dupes/ncurses'
 
   option 'disable-etcdir', 'Disable the reading of Zsh rc files in /etc'
 
@@ -19,6 +20,9 @@ class ZshForCjk < Formula
   end
 
   def install
+    ENV.append_to_ldflags "-L/usr/local/opt/ncurses/lib"
+    ENV.append_to_cppflags "-I/usr/local/opt/ncurses/include"
+
     args = %W[
       --prefix=#{prefix}
       --enable-fndir=#{share}/zsh/functions
