@@ -1,6 +1,6 @@
 require 'formula'
 
-class ZshForCJK < Formula
+class ZshForCjk < Formula
   homepage 'http://www.zsh.org/'
   url 'https://downloads.sourceforge.net/project/zsh/zsh/5.0.5/zsh-5.0.5.tar.bz2'
   mirror 'http://www.zsh.org/pub/zsh-5.0.5.tar.bz2'

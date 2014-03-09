@@ -1,6 +1,6 @@
 require 'formula'
 
-class ZshForCJKInstalled < Requirement
+class ZshForCjkInstalled < Requirement
   default_formula 'zsh-for-cjk'
   fatal true
 
@@ -9,11 +9,11 @@ class ZshForCJKInstalled < Requirement
   end
 
   def message
-    "Zsh 5.x is required to install. Consider `brew install babie/for-cjk/zsh-for-cjk`."
+    "Zsh 5.x is required to install. Consider `brew tap babie/for_cjk && brew install zsh-for-cjk`."
   end
 end
 
-class ZpythonForCJK < Formula
+class ZpythonForCjk < Formula
   homepage 'https://bitbucket.org/ZyX_I/zsh'
   url 'http://www.zsh.org/pub/zsh-5.0.5.tar.bz2'
   url 'https://downloads.sourceforge.net/project/zsh/zsh/5.0.5/zsh-5.0.5.tar.bz2'
@@ -28,7 +28,7 @@ class ZpythonForCJK < Formula
 
   head 'https://bitbucket.org/ZyX_I/zsh.git', :branch => 'zpython'
 
-  depends_on ZshForCJKInstalled
+  depends_on ZshForCjkInstalled
   depends_on :python
   depends_on :autoconf => :build
 
