@@ -20,8 +20,8 @@ class ZshForCjk < Formula
   end
 
   def install
-    ENV.append_to_ldflags "-L/usr/local/opt/ncurses/lib"
-    ENV.append_to_cppflags "-I/usr/local/opt/ncurses/include"
+    ENV.append "LDFLAGS", "-L/usr/local/opt/ncurses/lib"
+    ENV.append "CPPFLAGS", "-I/usr/local/opt/ncurses/include"
 
     args = %W[
       --prefix=#{prefix}
