@@ -8,7 +8,7 @@ class ZshForCjk < Formula
 
   depends_on 'gdbm'
   depends_on 'pcre'
-  depends_on 'dupes/ncurses'
+  depends_on 'ncurses'
 
   option 'disable-etcdir', 'Disable the reading of Zsh rc files in /etc'
 
