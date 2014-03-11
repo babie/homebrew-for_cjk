@@ -35,6 +35,7 @@ class ZshForCjk < Formula
       --enable-pcre
       --enable-zsh-secure-free
       --with-tcsetpgrp
+      --with-term-lib=ncursesw
     ]
 
     if build.include? 'disable-etcdir'
